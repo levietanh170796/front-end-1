@@ -1,376 +1,118 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<style >
-		html, body {
-    	  margin: 0px;
-    	}
-		.item {
-			background-color: white;
-			width: 360px;
-			/*height: 770px;*/
-			margin-bottom: 10%;
-			margin-top: 175px;
-			margin-left: 40px;
-			margin-right: 40px;
-		}
-
-		.flex-container{
-			display: flex;
-			background-color: #cad3d3;
-			justify-content: center;
-			align-items: center
-		}
-		/*img{
-			width: 360px;
-			height: 270px;
-			z-index: -1;
-		}
-*/		.transbox{
-			opacity: 0.7;
-			width: 360px;
-			height: 270px;
-			background-color: rgba(57,61,79,0.7);
-			/*border: 1px solid black;*/
-			display: flex;
-			justify-content: center;
-			align-items: center;
-
-		}
-		#background1{
-			margin-top: 0px;
-			width: 360px;
-			background: url(ocean.jpg) repeat;
-			color: white;
-		}
-		#background2{
-			margin-top: 0px;
-			width: 360px;
-			background: url(mountains.jpg) repeat;
-			color: white;
-		}
-		#background3{
-			margin-top: 0px;
-			width: 360px;
-			background: url(forest.jpg) repeat;
-			color: white;
-		}
-		p.label-1{
-			margin-top: 0px;
-			margin-bottom: 0px;
-			font-size: 36px;
-			letter-spacing: 2px;
-			line-height: 50px;
-			color: rgb(255,255,255);
-			font-family: "Montserrat";
-			font-weight: 300;
-			text-align: center;
-			width: 360px;
-		}
-		div.subtitle-1{
-			font-size: 24px;
-			line-height: 37px;
-			color: rgb(95,114,127);
-			font-family: "Source Sans Pro";
-			font-weight: 300;
-			text-align: center;				
-		}
-		div.subtitle-2{
-			font-size: 14px;
-			line-height: 25px;
-			color: rgb(153,169,181);
-			font-family: "Source Sans Pro";
-			text-align: center;			
-		}
-		div.container{
-			display: flex;
-			flex-direction: column;
-			width: 360px;
-			justify-content: center;
-			align-items: center;
-		}
-
-		div.item1-container{
-			background-color: white;
-
-		}
-
-		div.item2-container{
-			background-color: #f3f5f7;
-		}
-
-		div.item-container{
-			width: 360px;
-			text-align: center;
-			font-size: 16px;
-			line-height: 50px;
-			color: rgb(95,114,127);
-			font-family: "Source Sans Pro";
-			padding-top: 0px;
-			padding-bottom: 0px;
-		}
-		div.item-first{
-			flex-grow: 2;
-			padding-top: 19px;
-			padding-bottom: 19px;
-		}
-		div.item-end{
-			flex-grow: 3;
-		}
-
-		.button1{
-			width: 170px;
-			height: 50px;
-			background-color: #ffffff;
-			border: 1px solid #2195f7;
-			margin-top: 50px;
-			margin-bottom: 50px;	
-		}
-		.button2{
-			width: 170px;
-			height: 50px;
-			background-color: #6c136f;
-			border: 1px solid #6c136f;
-			margin-top: 50px;
-			margin-bottom: 50px;	
-		}
-		.button3{
-			width: 170px;
-			height: 50px;
-			background-color: #ffffff;
-			border: 1px solid #31ad1d;
-			margin-top: 50px;
-			margin-bottom: 50px;	
-		}
-
-		.text-button{
-			font-size: 19px;
-			letter-spacing: 1px;
-			line-height: 54px;
-			
-			font-family: "Montserrat";
-			font-weight: 300;
-			text-align: center;		
-		}
-		.pointer {
-			cursor: pointer;
-/*			cursor: crosshair;
-			width: 50px;
-			height: 50px;*/
-		}	
-		.text-button-1{
-			color: #2195f7;
-		}
-		.text-button-2{
-			color: #ffffff;
-		}
-		.text-button-3{
-			color: #31ad1d;
-		}
-
-		.text-label{
-			font-size: 36px;
-			letter-spacing: 2px;
-			line-height: 50px;
-			color: rgb(255,255,255);
-			font-family: "Montserrat";
-			font-weight: 300;
-			text-align: center;
-		}
-
-		.wrap-price{
-			width: 120px;
-			height: 120px;
-			border-radius: 60px;
-			z-index: 1;
-			position: absolute;
-			top: 115px;
-			margin-left: 120px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			text-align: center;
-			flex-direction: column;
-		}
-		.wrap-new{
-			background: url(new.png);
-			z-index: 1;
-			width: 65px;
-			height: 65px;
-			top: 160px;
-			margin-left: -15px;
-			position: absolute;
-		}
-		#wrap-price-1{
-			background-color: #ffffff;
-		}
-		#wrap-price-2{
-			background-color: #2b2d3d;
-		}
-		#wrap-price-3{
-			background-color: #ffffff;
-		}
-		.price{
-			font-size: 32px;
-			line-height: 37px;
-			font-family: "Source Sans Pro";
-			font-weight: 300;
-			text-align: center;
-			justify-content: center;
-		}
-		.price1{
-			color: rgb(33,150,247);
-		}
-		.price2{
-			color: #d74498;
-		}
-		.price3{
-			color: #32ad1e;
-		}
-		.per-tour-1{
-			font-size: 16px;
-			line-height: 25px;
-			color: rgb(153,169,181);
-			font-family: "Source Sans Pro";
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			text-align: center;
-		}
-		.transbox-2{
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			text-align: center;
-		}
-		#text-new{
-			font-size: 12px;
-			letter-spacing: 1px;
-			line-height: 50px;
-			color: rgb(255,255,255);
-			font-family: "Montserrat";
-			font-weight: bold;
-			text-align: center;
-			margin-top: 10px;
-		}
-		
-
-	</style>
+	<meta charset="utf-8">
+    <title>Week 1</title>
+    <link rel="stylesheet" href="./stylesheets/main.css">
+    <meta name="description" content="Exercise 1"/>
+    <meta name="author" content="VietAnhLe"
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Source+Sans+Pro" rel="stylesheet">
 </head>
 
 <body>
-<div class="flex-container">
-	<div class="item" >
-		<div class="wrap-price" id="wrap-price-1">
-			<div class="price price1">
-				$399
+<div class="screenmain">
+	<div class="goods" >
+		
+		<div class="background background--image-ocean">
+			<div class="background__wrap-price background__wrap-price--bgcolor-white">
+				<div class="background__price background__price--color-blue">$399</div>
+				<div class="background__text-price">Per tour</div>
 			</div>
-			<div class="per-tour-1">Per tour</div>
-		</div>
-		<div id="background1">
-			
-			<div class="transbox">
-				<div class="text-label">OCEAN</div>
+			<div class="background__image-text">
+				<div class="background__image-text--font--size">OCEAN</div>
 			</div>
 		</div>
 		
-		<div class="container">
-			<div class="item-container item1-container item-first">
-				<div class="subtitle-1">
-					Subtitle goes here
-				</div>
-				<div class="subtitle-2">
-					Subtitle second line goes here lorem ipsum *
-				</div>
-			</div>
-			<div class="item-container item2-container"> Drop out ramen hustle</div>
-			<div class="item-container item1-container">Coworking viral landing</div>
-			<div class="item-container item2-container">Crush revenue traction</div>
-			<div class="item-container item1-container">User base minimum viable</div>
-			<div class="item-container item2-container">Lorem ipsum dolr</div>
-			<div class="item-container item1-container item-end">
-				<button class="button1">
-					<div class="text-button text-button-1">BUY TOUR</div>
-				</button>
-			</div>
+		<div >
+			<ul style="list-style-type:none" class="listmenu">
+			  <li>
+			  	<ul style="list-style-type:none" class="listmenu__subtitle">
+			  		<li class="listmenu__subtitle-big">Subtitle goes here</li>
+			  		<li class="listmenu__subtitle-small">Subtitle second line goes here lorem ipsum *</li>	
+			  	</ul>
+			  </li>
+			  <li>Drop out ramen hustle</li>
+			  <li>Coworking viral landing</li>
+			  <li>Crush revenue traction</li>
+			  <li>User base minimum viable</li>
+			  <li>Lorem ipsum dolr</li>
+			  <li class="listmenu__button --button--size--font">
+			  	<a href="#" style="text-decoration: none" class="  --button--color-blue--hover">BUY TOUR</a>
+			  </li>
+			</ul>  
+
 		</div>
 	</div>
 
-	<div class="item" >
-		<div class="wrap-new">
-			<div id="text-new">NEW</div>
-		</div>
-		<div class="wrap-price" id="wrap-price-2">
-			<div class="price price2">
-				$499
+	<div class="goods" >
+		
+		<div class="background background--image-mountains">
+			<div class="background__new">
+				<div class="background__new--text">NEW</div>
 			</div>
-			<div class="per-tour-1">Per tour</div>
-		</div>
-		<div id="background2">
-			
-			<div class="transbox transbox-2">
-				<div class="text-label">MOUNTAINS</div>
+			<div class="background__wrap-price background__wrap-price--bgcolor-black">
+				<div class="background__price background__price--color-purple">
+					$499
+				</div>
+				<div class="background__text-price">Per tour</div>
+			</div>
+			<div class="background__image-text">
+				<div class="background__image-text--font--size">MOUNTAINS</div>
 				<div>The best price/quantity plan *</div>
 			</div>
 		</div>
-		
-		<div class="container">
-			<div class="item-container item1-container item-first">
-				<div class="subtitle-1">
-					Subtitle goes here
-				</div>
-				<div class="subtitle-2">
-					Subtitle second line goes here lorem ipsum *
-				</div>
-			</div>
-			<div class="item-container item2-container"> Drop out ramen hustle</div>
-			<div class="item-container item1-container">Coworking viral landing</div>
-			<div class="item-container item2-container">Crush revenue traction</div>
-			<div class="item-container item1-container">User base minimum viable</div>
-			<div class="item-container item2-container">Lorem ipsum dolr</div>
-			<div class="item-container item1-container item-end">
-				<button class="button2 pointer">
-					<div class="text-button text-button-2">BUY TOUR</div>
-				</button>
-				<div></div>
-			</div>
+		<div >
+			<ul style="list-style-type:none" class="listmenu">
+			  <li>
+			  	<ul style="list-style-type:none" class="listmenu__subtitle">
+			  		<li class="listmenu__subtitle-big">Subtitle goes here</li>
+			  		<li class="listmenu__subtitle-small">Subtitle second line goes here lorem ipsum *</li>	
+			  	</ul>
+			  </li>
+			  <li>Drop out ramen hustle</li>
+			  <li>Coworking viral landing</li>
+			  <li>Crush revenue traction</li>
+			  <li>User base minimum viable</li>
+			  <li>Lorem ipsum dolr</li>
+			  <li class="listmenu__button --button--size--font">
+			  	<a href="#" style="text-decoration: none" class="  --button--color-purple--hover">BUY TOUR</a>
+			  </li>
+			</ul>  
 		</div>
+		
 	</div>
 
-	<div class="item" >
-		<div class="wrap-price" id="wrap-price-3">
-			<div class="price price3">
-				$599
-			</div>
-			<div class="per-tour-1">Per tour</div>
-		</div>
-		<div id="background3">
-			
-			<div class="transbox">
-				<div class="text-label">FOREST</div>
-			</div>
-		</div>
+	<div class="goods" >
 		
-		<div class="container">
-			<div class="item-container item1-container item-first">
-				<div class="subtitle-1">
-					Subtitle goes here
+		<div class="background background--image-forest">
+			<div class="background__wrap-price background__wrap-price--bgcolor-white">
+				<div class="background__price background__price--color-green">
+					$599
 				</div>
-				<div class="subtitle-2">
-					Subtitle second line goes here lorem ipsum *
-				</div>
+				<div class="background__text-price">Per tour</div>
 			</div>
-			<div class="item-container item2-container"> Drop out ramen hustle</div>
-			<div class="item-container item1-container">Coworking viral landing</div>
-			<div class="item-container item2-container">Crush revenue traction</div>
-			<div class="item-container item1-container">User base minimum viable</div>
-			<div class="item-container item2-container">Lorem ipsum dolr</div>
-			<div class="item-container item1-container item-end">
-				<button class="button3">
-					<div class="text-button text-button-3">BUY TOUR</div>
-				</button>
+			<div class="background__image-text">
+				<div class="background__image-text--font--size">FOREST</div>
 			</div>
+		</div>
+
+		<div >
+			<ul style="list-style-type:none" class="listmenu">
+			  <li>
+			  	<ul style="list-style-type:none" class="listmenu__subtitle">
+			  		<li class="listmenu__subtitle-big">Subtitle goes here</li>
+			  		<li class="listmenu__subtitle-small">Subtitle second line goes here lorem ipsum *</li>	
+			  	</ul>
+			  </li>
+			  <li>Drop out ramen hustle</li>
+			  <li>Coworking viral landing</li>
+			  <li>Crush revenue traction</li>
+			  <li>User base minimum viable</li>
+			  <li>Lorem ipsum dolr</li>
+			  <li class="listmenu__button --button--size--font">
+			  	<a href="#" style="text-decoration: none" class="  --button--color-green--hover">BUY TOUR</a>
+			  </li>
+			</ul>  
 		</div>
 	</div>
 </div>
