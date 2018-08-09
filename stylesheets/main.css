@@ -1,0 +1,221 @@
+@import "normalize.css";
+		body {
+    	  margin: 0px;
+    	  font-size: 15px;
+    	  line-height: 1.5;
+    	  letter-spacing: 1px;
+    	  color: #000000;
+    	  font-family: "Source Sans Pro", "Montserrat",sans-serif;
+    	}
+		.goods {
+			background-color: white;
+			width: 360px;
+			/*height: 770px;*/
+			margin-bottom: 10%;
+			margin-top: 175px;
+			margin-left: 40px;
+			margin-right: 40px;
+			position: relative;
+		}
+
+		.screenmain{
+			display: flex;
+			background-color: #cad3d3;
+			justify-content: center;
+			align-items: center;
+		}
+		.background__image-text{
+			opacity: 0.7;
+			width: 360px;
+			height: 270px;
+			background-color: rgba(57,61,79,0.7);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+		.background{
+			background: url(../ocean.jpg) repeat;
+			color: white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.background--image-ocean{
+			background: url(../ocean.jpg) repeat;
+		}
+		.background--image-mountains{
+			background: url(../mountains.jpg) repeat;
+		}
+		.background--image-forest{
+			background: url(../forest.jpg) repeat;
+		}
+		.listmenu__subtitle-big{
+			font-size: 24px;
+			line-height: 37px;
+			color: rgb(95,114,127);
+			font-family: "Source Sans Pro";
+			font-weight: 300;
+			text-align: center;				
+		}
+		.listmenu__subtitle-small{
+			font-size: 14px;
+			line-height: 25px;
+			color: rgb(153,169,181);
+			font-family: "Source Sans Pro";
+			text-align: center;			
+		}
+		.listmenu__subtitle{
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+
+		li {
+			padding: 0px;
+			font-family: "Source Sans Pro";
+			text-align: center;
+			font-size: 16px;
+			line-height: 50px;
+			color: rgb(95,114,127);
+		}
+		ul.listmenu > li:nth-child(odd) {
+		    background: #ffffff;
+
+		}
+
+		ul.listmenu > li:nth-child(even) {
+		    background: #f3f5f7;
+		}
+		ul {
+			margin: 0px;
+			padding: 0px;
+		}
+		
+		.listmenu__button{
+			width: 170px;
+			height: 50px;
+			margin-top: 50px;
+			margin-bottom: 50px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		a {
+			display: block;
+			width: 170px;
+			height: 50px;
+		}
+		.--button--size--font{
+			font-size: 19px;
+			line-height: 54px;
+			font-family: "Montserrat";
+			font-weight: 300;
+			text-align: center;	
+		}
+		.--button--color-blue--hover{
+			color: #2195f7;	
+			border: 1px solid #2195f7;
+			background-color: #ffffff;
+		}
+		.--button--color-blue--hover:hover{
+			color: #ffffff;
+			border: 1px solid #2195f7;
+			background-color: #2195f7;
+		}
+		.--button--color-purple--hover{
+			color: #6c136f;
+			border: 1px solid #6c136f;
+			background-color: #ffffff;
+		}
+		.--button--color-purple--hover:hover{
+			color: white;
+			border: 1px solid #6c136f;
+			background-color: #6c136f;
+		}
+		.--button--color-green--hover{
+			color: #31ad1d;
+			border: 1px solid #31ad1d;
+			background-color: #ffffff;
+		}
+		.--button--color-green--hover:hover{
+			color: white;
+			border: 1px solid #31ad1d;
+			background-color: #31ad1d;
+		}
+
+		.background__image-text--font--size{
+			font-size: 36px;
+			letter-spacing: 2px;
+			line-height: 50px;
+			color: rgb(255,255,255);
+			font-family: "Montserrat";
+			font-weight: 300;
+			text-align: center;
+		}
+
+		.background__wrap-price{
+			width: 120px;
+			height: 120px;
+			border-radius: 60px;
+			z-index: 1;
+			position: absolute;
+			top: -60px;
+			/*margin-left: 120px;*/
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			flex-direction: column;
+		}
+		.background__new{
+			background: url(../new.png);
+			z-index: 1;
+			width: 65px;
+			height: 65px;
+			top: -10px;
+			margin-left: -160px;
+			position: absolute;
+		}
+		.background__wrap-price--bgcolor-white{
+			background-color: #ffffff;
+		}
+		.background__wrap-price--bgcolor-black{
+			background-color: #2b2d3d;
+		}
+		
+		.background__price{
+			font-size: 32px;
+			line-height: 37px;
+			font-family: "Source Sans Pro";
+			font-weight: 300;
+			text-align: center;
+			justify-content: center;
+		}
+		.background__price--color-blue{
+			color: rgb(33,150,247);
+		}
+		.background__price--color-purple{
+			color: #d74498;
+		}
+		.background__price--color-green{
+			color: #32ad1e;
+		}
+		.background__text-price{
+			font-size: 16px;
+			line-height: 25px;
+			color: rgb(153,169,181);
+			font-family: "Source Sans Pro";
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+		.background__new--text{
+			font-size: 12px;
+			letter-spacing: 1px;
+			line-height: 50px;
+			color: rgb(255,255,255);
+			font-family: "Montserrat";
+			font-weight: bold;
+			text-align: center;
+			margin-top: 10px;
+		}
